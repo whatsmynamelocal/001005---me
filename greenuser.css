@@ -1,0 +1,156 @@
+body {
+  background-color: white;
+  font-family: Pirulen;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white
+}
+h1 {
+  color: 	#FFC7B9;
+  font-family: Pirulen;
+}
+h2 {
+  color: 	white;
+  font-family: Pirulen;
+}
+h4 {
+  color: 	#FFC7B9;
+  font-family: Pirulen;
+  background-color: white;
+}
+p {
+  color: #081F1C;
+  font-family: Pirulen;
+  background-color: white;
+}
+table
+ {
+  background-color: white;
+  color: #8F9779;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Pirulen;
+}
+table.other
+ {
+  background-color: #8F9779;
+  color: color;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Pirulen;
+}
+table.other002
+ {
+  background-color: #8403C4;
+  color: color;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Pirulen;
+}
+table.other002
+ {
+  background-color: #6E90AF;
+  color: color;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Pirulen;
+}
+table.other003
+ {
+  background-color: #B0BEA4;
+  color: color;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Pirulen;
+}
+table.whibl
+ {
+  background-color: white;
+  color: black;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Pirulen;
+}
+ {
+  color: #8F9779;
+  width: 10%;
+  align : left;
+  font-family: Pirulen;
+  font-size: large;
+}
+
+td.other
+ {
+  color: #081F1C;
+  width: 10%;
+  align : left;
+  font-family: Pirulen;
+  font-size: large;
+}
+td.other002
+ {
+  color: #081F1C;
+  width: 10%;
+  align : left;
+  font-family: Pirulen;
+  font-size: large;
+}
+td.other003
+ {
+  color: #081F1C;
+  width: 10%;
+  align : left;
+  font-family: Pirulen;
+  font-size: large;
+}
+td.end
+ {
+  color: #081F1C;
+  width: 10%;
+  align : left;
+  font-family: Pirulen;
+  font-size: large;
+}
+
+
+a
+{
+  color:	#FFC7B9;
+  font-family: Pirulen;
+}
+input
+{
+  color: 	#FFC7B9;
+  font-family: Pirulen;
+  border-width: thin;
+  background-color: coral;
+  border-color: white;
+}
+hr.new1 {
+  border-top: 1px solid red;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}

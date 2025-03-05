@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Getting Client's IP</title>
+    <style>
+        p, h1 {
+            color: green;
+        }
+    </style>
+	<link rel="stylesheet" href="../greenuser.css">
+	<script type="application/javascript">
+  function getIP(json) {
+    document.write("<h3> Your Public IP Address is: ", json.ip,"</h3>");
+  }
+</script>
+</head>
+
+<body>
+    <center>
+        <h1><a href="https://www.green-ict-safe.me" >Green-ict-safe.me</a></h1>
+		<h2><a href="getlat.html" >Lat you</a></h2>
+		<h2><a href="getall.html" >Get all</a></h2>
+        <p id="ip-address"></p>
+    </center>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Getting Geo</title>
+	<link rel="stylesheet" href="../greenuser.css">
+    <style>
+        p, h1 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1><a href="https://www.green-ict-safe.me" >Green-ict-safe.me</a></h1>
+		<h2><a href="getlat.html" >Lat you</a></h2>
+		<h2><a href="getip.html" >IP you</a></h2>
+        <h3>Getting Geo:</h3>
+		<button onclick="getLocation()">green you</button>
+        <p id="demo"></p>
+    </center>
+
+    <script>
+const x = document.getElementById("demo");
+
+/*
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+  
+}
+
+*/
+// First, get the user's location coordinates using the Geolocation API
+if (navigator.geoLocation) {
+  navigator.geolocation.getCurrentPosition(showCity);
+} else {
+  console.log("Geolocation is not supported by this browser.");
+}
+
+// Then, pass the location coordinates to a Geocoding API to get the city name
+function showCity(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+
+  // Make a request to a Geocoding API (e.g. Google Maps Geocoding API)
+  //const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=YOUR_API_KEY`;
+   const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=YOUR_API_KEY`;
+//  https://utrace.me/?query=79.45.204.35
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      // Parse the city name from the API response
+      const city = data.results[0].address_components.find((component) =>
+        component.types.includes("locality")
+      ).long_name;
+
+      console.log(`Your city is ${city}.`);
+	  
+	  
+	  
+    })
+    .catch((error) => console.log(error));
+}
+
+
+</script>
+
+</body>
+
+</html>

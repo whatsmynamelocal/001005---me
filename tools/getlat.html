@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Getting Geo</title>
+	<link rel="stylesheet" href="../greenuser.css">
+    <style>
+        p, h1 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1><a href="https://www.green-ict-safe.me" >Green-ict-safe.me</a></h1>
+		<h2><a href="getip.html" >IP you</a></h2>
+		<h2><a href="getall.html" >Get all</a></h2>
+        <h3>Getting Geo:</h3>
+		<button onclick="getLocation()">green you</button>
+        <p id="demo"></p>
+    </center>
+
+    <script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "<h4>Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude+"</h4>";
+}
+</script>
+    </script>
+</body>
+
+</html>
