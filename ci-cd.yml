@@ -6,16 +6,13 @@ on:
       - main
 
 jobs:
+ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: npm test
+      - name: Build Docker 001005---me
+        run: docker build -t 001005---me .
+      - name: Run container tests
+        run: docker run 001005---me npm test
