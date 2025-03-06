@@ -16,3 +16,12 @@ jobs:
         run: docker build -t 001005---me .
       - name: Run container tests
         run: docker run 001005---me npm test
+- name: Log in to Docker Hub
+  uses: docker/login-action@v2
+  with:
+    username: ${{ secrets.DOCKER_USERNAME }}
+    password: ${{ secrets.DOCKER_PASSWORD }}
+- name: Push Docker image
+  run: |
+    docker tag 001005---me whatsmynamelocal/001005---me:latest
+    docker push whatsmynamelocal/001005---me:latest
